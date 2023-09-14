@@ -1,8 +1,8 @@
 package ru.vsu.cs.util.steblev_d_v.oop.tasks.task1_14;
 
-import org.w3c.dom.Node;
-
-import java.util.ListIterator;
+/**
+ * @author Danila Steblev
+ */
 
 public class LinkedList<T> implements SimpleLinkedList<T> {
 
@@ -41,7 +41,7 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
 
     @Override
     public void remove(int index) {
-
+        /* toDO */
     }
 
     @Override
@@ -62,7 +62,6 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
         if (curInd == this.size() - 1) { // Проверка если элемент последний - выводим Node + "]"
             System.out.println(currentNode.next.data + "]");
         }
-        System.out.println();
     }
 
 
