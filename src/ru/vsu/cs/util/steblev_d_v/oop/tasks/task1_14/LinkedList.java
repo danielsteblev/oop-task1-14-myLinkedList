@@ -41,7 +41,26 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
 
     @Override
     public void remove(int index) {
-        /* toDO */
+        int curInd = 0;
+        Node currentNode = head;
+        Node prevNode = null;
+
+        while (currentNode != null) {
+            if (curInd == index) {
+                if(currentNode == head) {
+                    head = currentNode.next;
+                } else{
+                    prevNode.next = currentNode.next;
+                }
+            }
+            prevNode = currentNode;
+            currentNode = currentNode.next;
+            curInd++;
+
+        }
+        System.out.println("Из вашего списка был удалён элемент под индексом: " + index);
+
+
     }
 
     @Override
@@ -49,7 +68,7 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
         int curInd = 0;
         Node currentNode = head;
 
-        if (head != null) {
+        if (head != null && this.size() > 1) {
             System.out.print("[" + head.data + ", ");
             curInd++;
             while (curInd != this.size() - 1) {
@@ -59,12 +78,14 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
             }
 
         }
+        if(size() == 1) {
+            System.out.println("[" + head.data + "]");
+            return;
+        }
         if (curInd == this.size() - 1) { // Проверка если элемент последний - выводим Node + "]"
             System.out.println(currentNode.next.data + "]");
         }
     }
-
-
 
 
     @Override

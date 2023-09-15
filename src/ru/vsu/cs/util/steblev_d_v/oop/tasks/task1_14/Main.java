@@ -8,17 +8,24 @@ public class Main {
         list.add(1);
         list.add(2);
         list.add(3);
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.size();
-        list.add(19);
-        list.size();
         list.print();
+        list.remove(2);
 
 
 
         System.out.println(list.size());
         list.print();
+
+
+
+        System.out.println(list.size());
+
+
+
+
+
+
+
+
     }
 }
