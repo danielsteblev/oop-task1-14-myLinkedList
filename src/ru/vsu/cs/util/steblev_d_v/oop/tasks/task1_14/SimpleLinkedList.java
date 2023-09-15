@@ -5,5 +5,6 @@ public interface SimpleLinkedList<T> {
     public void remove(int index);
     public void print();
     public int size();
+    public T get(int index);
 
 }

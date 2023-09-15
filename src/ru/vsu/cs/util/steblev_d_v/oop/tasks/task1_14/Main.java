@@ -7,25 +7,13 @@ public class Main {
         LinkedList<Integer> list = new LinkedList();
         list.add(1);
         list.add(2);
-        list.add(3);
         list.print();
-        list.remove(2);
-
-
-
-        System.out.println(list.size());
+        int x = list.get(0);
+        list.get(1);
+        System.out.println(x);
+        list.remove(1);
         list.print();
-
-
-
-        System.out.println(list.size());
-
-
-
-
-
-
-
+        list.get(0);
 
     }
 }

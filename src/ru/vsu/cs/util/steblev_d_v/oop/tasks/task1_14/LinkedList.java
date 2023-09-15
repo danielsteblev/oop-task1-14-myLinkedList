@@ -1,5 +1,6 @@
 package ru.vsu.cs.util.steblev_d_v.oop.tasks.task1_14;
 
+
 /**
  * @author Danila Steblev
  */
@@ -82,6 +83,7 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
             System.out.println("[" + head.data + "]");
             return;
         }
+
         if (curInd == this.size() - 1) { // Проверка если элемент последний - выводим Node + "]"
             System.out.println(currentNode.next.data + "]");
         }
@@ -100,6 +102,25 @@ public class LinkedList<T> implements SimpleLinkedList<T> {
             }
         }
         return size;
+    }
+
+    @Override
+    public T get(int index) {
+        if(index > this.size() - 1) {
+            throw new IndexOutOfBoundsException("Индекс превышает размер списка!");
+        }
+
+        int curInd = 0;
+        Node curNode = head;
+        while (curNode != null){
+            if(curInd == index) {
+                System.out.println("Элемент списка под индесом " + "'" + index + "'"+ " следующий: " + curNode.data);
+                return curNode.data;
+            }
+            curNode = curNode.next;
+            curInd++;
+        }
+        return null;
     }
 }
 
